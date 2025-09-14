@@ -18,40 +18,58 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
-    title: "Lessons from Building a Solar Tracking System",
-    excerpt: "Key insights from developing an IoT-based solar tracking system using Arduino, including hardware challenges, sensor integration, and energy optimization strategies.",
-    date: "2024-02-15",
-    readTime: "5 min",
-    category: "IoT & Hardware",
-    tags: ["Arduino", "IoT", "Renewable Energy", "Hardware"],
-    slug: "solar-tracking-system-lessons"
-  },
-  {
-    title: "Optimizing SQL Queries for Large-Scale Analytics",
-    excerpt: "Performance optimization techniques that reduced query execution time by 65% in healthcare analytics dashboards, with practical examples and benchmarks.",
-    date: "2024-01-28",
-    readTime: "7 min",
-    category: "Data Engineering",
-    tags: ["SQL", "Performance", "Data Analytics", "Optimization"],
-    slug: "optimizing-sql-queries-analytics"
-  },
-  {
-    title: "Building Healthcare Dashboards in Power BI",
-    excerpt: "Complete walkthrough of designing and implementing healthcare analytics dashboards, from data modeling to user interface design and automated reporting.",
-    date: "2024-01-10",
+    title: "5 Steps to become a data scientist",
+    excerpt: "A comprehensive guide outlining the essential steps and skills needed to transition into a data science career, from foundational knowledge to practical experience.",
+    date: "2024-05-21",
     readTime: "6 min",
-    category: "Business Intelligence",
-    tags: ["Power BI", "Healthcare", "Data Visualization", "Dashboards"],
-    slug: "healthcare-dashboards-power-bi"
+    category: "Data Science",
+    tags: ["Data Science", "Career", "Learning Path", "Skills"],
+    slug: "5-steps-to-become-data-scientist"
   },
   {
-    title: "Machine Learning for Customer Churn Prediction",
-    excerpt: "Step-by-step guide to building customer churn prediction models using Python and scikit-learn, with feature engineering and model evaluation techniques.",
-    date: "2023-12-20",
+    title: "Mid-journey is dead? How this tool will kill AI for better",
+    excerpt: "Exploring the evolution of AI tools and how emerging technologies are reshaping the artificial intelligence landscape for more practical applications.",
+    date: "2024-07-05",
+    readTime: "5 min",
+    category: "Artificial Intelligence",
+    tags: ["AI Tools", "Technology Trends", "Innovation", "Future Tech"],
+    slug: "midjourney-dead-ai-tools-evolution"
+  },
+  {
+    title: "200 programming terms every programmer must know",
+    excerpt: "An extensive compilation of essential programming terminology that every developer should understand, from beginner concepts to advanced technical jargon.",
+    date: "2024-06-23",
+    readTime: "12 min",
+    category: "Programming",
+    tags: ["Programming", "Terminology", "Learning", "Reference"],
+    slug: "200-programming-terms-every-programmer"
+  },
+  {
+    title: "NFT Nightmares: Scams That destroyed the bubble",
+    excerpt: "An in-depth analysis of the NFT market collapse, examining the scams and fraudulent practices that contributed to the bursting of the digital ownership bubble.",
+    date: "2024-05-28",
+    readTime: "7 min",
+    category: "Blockchain & Web3",
+    tags: ["NFT", "Blockchain", "Scams", "Digital Assets"],
+    slug: "nft-nightmares-scams-bubble"
+  },
+  {
+    title: "IS JAVA DEAD? (RIP 😢 JAVA) WILL JAVA BE REPLACED BY KOTLIN?",
+    excerpt: "A thorough examination of Java's current state in modern development and whether Kotlin poses a real threat to Java's dominance in enterprise applications.",
+    date: "2022-06-17",
     readTime: "8 min",
-    category: "Machine Learning",
-    tags: ["Python", "Machine Learning", "Customer Analytics", "Predictive Modeling"],
-    slug: "ml-customer-churn-prediction"
+    category: "Programming Languages",
+    tags: ["Java", "Kotlin", "Programming Languages", "Enterprise Development"],
+    slug: "java-dead-kotlin-replacement"
+  },
+  {
+    title: "Will Web 4.0 be the Next Big Thing?",
+    excerpt: "Exploring the potential of Web 4.0 and what this next evolution of the internet might look like, from decentralized systems to AI integration.",
+    date: "2022-07-11",
+    readTime: "6 min",
+    category: "Web Development",
+    tags: ["Web 4.0", "Future Web", "Technology Trends", "Internet Evolution"],
+    slug: "web-4-next-big-thing"
   }
 ]
 
@@ -139,14 +157,10 @@ export default function BlogSection() {
                     <Button 
                       variant="outline" 
                       className="w-full border-cyan-500/50 text-cyan-400 hover:bg-cyan-950/30 hover:border-cyan-400 transition-all duration-300 group"
-                      onClick={() => {
-                        // For now, this will just show a coming soon message
-                        // In a real implementation, you'd navigate to the blog post
-                        alert('Blog post coming soon! This is a preview of the blog structure.')
-                      }}
+                      onClick={() => window.open('https://medium.com/@krishishah2021', '_blank')}
                     >
-                      Read Full Article
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      Read on Medium
+                      <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </CardFooter>
                 </Card>
@@ -154,29 +168,36 @@ export default function BlogSection() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-slate-400 mb-6">
-              Want to dive deeper into technical topics and project case studies?
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                variant="outline"
-                className="border-cyan-500 text-cyan-400 hover:bg-cyan-950/30"
-                onClick={() => {
-                  alert('Full blog coming soon! Stay tuned for in-depth technical articles and case studies.')
-                }}
-              >
-                View All Articles
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </Button>
-              <Button
-                variant="outline"
-                className="border-slate-600 text-slate-300 hover:bg-slate-800/30"
-                onClick={() => window.open('https://medium.com/@krishi-shah', '_blank')}
-              >
-                Follow on Medium
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </Button>
+          <div className="text-center mt-16">
+            <div className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 max-w-2xl mx-auto">
+              <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-3">
+                📚 More Technical Writing
+              </h3>
+              <p className="text-slate-300 mb-6">
+                Explore my complete collection of articles on Medium, covering data science, programming, AI, and emerging technologies.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0 px-6 py-2 font-medium transition-all duration-300 transform hover:scale-105"
+                  onClick={() => window.open('https://medium.com/@krishishah2021', '_blank')}
+                >
+                  View All Articles on Medium
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </Button>
+                <Button
+                  variant="outline"
+                  className="border-slate-600 text-slate-300 hover:bg-slate-800/30 hover:border-slate-500 px-6 py-2"
+                  onClick={() => window.open('https://medium.com/@krishishah2021', '_blank')}
+                >
+                  Follow on Medium
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+              <div className="mt-4 flex items-center justify-center gap-2 text-slate-500 text-sm">
+                <span>📈 113 followers</span>
+                <span>•</span>
+                <span>🎯 Published in Level Up Coding, CodeX, and more</span>
+              </div>
             </div>
           </div>
         </motion.div>

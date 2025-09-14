@@ -699,110 +699,209 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-20 relative">
+        <section id="contact" className="py-20 bg-gradient-to-b from-slate-950 to-black relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-900/10 via-slate-900/20 to-transparent"></div>
           <TechDecoration className="top-10 left-10" variant="5" />
-          <div className="container mx-auto px-4 max-w-2xl relative z-10">
+          
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <SectionHeader title="Contact Me" subtitle="Get In Touch" />
-              <p className="text-center text-slate-400 mb-8">
-                Have a question or want to collaborate? Feel free to get in touch!
-              </p>
-
-              <div className="flex flex-col items-center mb-8 space-y-4">
-                <div className="flex items-center p-3 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700 w-full max-w-md">
-                  <div className="p-2 bg-cyan-500/10 rounded-full mr-3">
-                    <Mail className="text-cyan-400" size={20} />
+              <SectionHeader title="Let's Connect" subtitle="Ready to collaborate on your next project?" />
+              
+              <div className="max-w-6xl mx-auto">
+                <div className="grid lg:grid-cols-2 gap-12 items-start">
+                  
+                  {/* Left Side - Info Cards */}
+                  <div className="space-y-8">
+                    <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 shadow-2xl">
+                      <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-6">
+                        🚀 Ready for New Opportunities
+                      </h3>
+                      <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                        I'm actively seeking full-time opportunities in <span className="text-cyan-400 font-semibold">Data Analytics</span>, 
+                        <span className="text-cyan-400 font-semibold"> Software Development</span>, and <span className="text-cyan-400 font-semibold">AI/ML Engineering</span>. 
+                        Let's discuss how I can contribute to your team's success.
+                      </p>
+                      
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="text-center p-4 bg-slate-900/30 rounded-lg border border-slate-700/50">
+                          <div className="text-2xl mb-2">💼</div>
+                          <div className="text-sm font-semibold text-cyan-300">Open to Work</div>
+                          <div className="text-xs text-slate-400">Full-time roles</div>
+                        </div>
+                        <div className="text-center p-4 bg-slate-900/30 rounded-lg border border-slate-700/50">
+                          <div className="text-2xl mb-2">🌍</div>
+                          <div className="text-sm font-semibold text-cyan-300">Remote Friendly</div>
+                          <div className="text-xs text-slate-400">Global teams</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Quick Contact Options */}
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold text-slate-300 mb-4">📬 Get In Touch</h4>
+                      
+                      <motion.a
+                        href="mailto:krishi12@my.yorku.ca"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="flex items-center p-4 bg-slate-800/30 backdrop-blur-sm rounded-xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group"
+                      >
+                        <div className="p-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mr-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300">
+                          <Mail className="text-cyan-400" size={24} />
+                        </div>
+                        <div>
+                          <div className="text-white font-medium group-hover:text-cyan-300 transition-colors">Email Me</div>
+                          <div className="text-slate-400 text-sm group-hover:text-cyan-400 transition-colors">krishi12@my.yorku.ca</div>
+                        </div>
+                        <ChevronRight className="ml-auto text-slate-600 group-hover:text-cyan-400 transition-colors" size={20} />
+                      </motion.a>
+                      
+                      <motion.a
+                        href="https://www.linkedin.com/in/krishi-shah312"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="flex items-center p-4 bg-slate-800/30 backdrop-blur-sm rounded-xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group"
+                      >
+                        <div className="p-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mr-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300">
+                          <Linkedin className="text-cyan-400" size={24} />
+                        </div>
+                        <div>
+                          <div className="text-white font-medium group-hover:text-cyan-300 transition-colors">Connect on LinkedIn</div>
+                          <div className="text-slate-400 text-sm group-hover:text-cyan-400 transition-colors">krishi-shah312</div>
+                        </div>
+                        <ExternalLink className="ml-auto text-slate-600 group-hover:text-cyan-400 transition-colors" size={20} />
+                      </motion.a>
+                      
+                      <motion.div
+                        whileHover={{ scale: 1.02 }}
+                        className="flex items-center p-4 bg-slate-800/30 backdrop-blur-sm rounded-xl border border-slate-700/50"
+                      >
+                        <div className="p-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mr-4">
+                          <Phone className="text-cyan-400" size={24} />
+                        </div>
+                        <div>
+                          <div className="text-white font-medium">Phone</div>
+                          <div className="text-slate-400 text-sm">825-777-0303</div>
+                        </div>
+                      </motion.div>
+                    </div>
+                    
+                    {/* Response Time */}
+                    <div className="bg-gradient-to-r from-green-900/20 to-emerald-900/20 backdrop-blur-sm rounded-xl p-6 border border-green-800/30">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        <span className="text-green-400 font-semibold">Quick Response</span>
+                      </div>
+                      <p className="text-slate-300 text-sm">
+                        I typically respond to emails within <span className="text-green-400 font-medium">24 hours</span> during business days.
+                        For urgent matters, feel free to reach out via LinkedIn.
+                      </p>
+                    </div>
                   </div>
-                  <a
-                    href="mailto:krishi12@my.yorku.ca"
-                    className="text-slate-300 hover:text-cyan-400 transition-colors"
-                  >
-                    krishi12@my.yorku.ca
-                  </a>
-                </div>
-                <div className="flex items-center p-3 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700 w-full max-w-md">
-                  <div className="p-2 bg-cyan-500/10 rounded-full mr-3">
-                    <Phone className="text-cyan-400" size={20} />
+                  
+                  {/* Right Side - Contact Form */}
+                  <div>
+                    <Card className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border-slate-700 shadow-2xl">
+                      <div className="p-8">
+                        <div className="text-center mb-8">
+                          <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-3">
+                            📩 Send a Message
+                          </h3>
+                          <p className="text-slate-400">
+                            Whether it's about a job opportunity, project collaboration, or just to say hello - I'd love to hear from you!
+                          </p>
+                        </div>
+                        
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                              <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
+                                Full Name *
+                              </label>
+                              <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="John Doe"
+                                required
+                                className="w-full px-4 py-3 bg-slate-900/80 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder:text-slate-500 transition-all duration-300"
+                              />
+                            </div>
+                            <div>
+                              <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+                                Email Address *
+                              </label>
+                              <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="john@example.com"
+                                required
+                                className="w-full px-4 py-3 bg-slate-900/80 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder:text-slate-500 transition-all duration-300"
+                              />
+                            </div>
+                          </div>
+                          
+                          <div>
+                            <label htmlFor="subject" className="block text-sm font-medium text-slate-300 mb-2">
+                              Subject
+                            </label>
+                            <select
+                              id="subject"
+                              name="subject"
+                              className="w-full px-4 py-3 bg-slate-900/80 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white transition-all duration-300"
+                            >
+                              <option value="general">General Inquiry</option>
+                              <option value="job">Job Opportunity</option>
+                              <option value="project">Project Collaboration</option>
+                              <option value="consulting">Consulting Services</option>
+                              <option value="other">Other</option>
+                            </select>
+                          </div>
+                          
+                          <div>
+                            <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+                              Message *
+                            </label>
+                            <textarea
+                              id="message"
+                              name="message"
+                              rows={6}
+                              placeholder="Tell me about your project, opportunity, or just say hello! I'd love to learn more about how we can work together."
+                              required
+                              className="w-full px-4 py-3 bg-slate-900/80 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder:text-slate-500 transition-all duration-300 resize-none"
+                            ></textarea>
+                          </div>
+                          
+                          <motion.div 
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="text-center"
+                          >
+                            <Button
+                              type="submit"
+                              className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0 py-3 text-lg font-semibold transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25"
+                            >
+                              Send Message 🚀
+                            </Button>
+                          </motion.div>
+                          
+                          <p className="text-center text-xs text-slate-500 mt-4">
+                            By sending a message, you agree that I may contact you regarding your inquiry.
+                          </p>
+                        </form>
+                      </div>
+                    </Card>
                   </div>
-                  <span className="text-slate-300">825-777-0303</span>
-                </div>
-                <div className="flex items-center p-3 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700 w-full max-w-md">
-                  <div className="p-2 bg-cyan-500/10 rounded-full mr-3">
-                    <Linkedin className="text-cyan-400" size={20} />
-                  </div>
-                  <a
-                    href="https://www.linkedin.com/in/krishi-shah312"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-slate-300 hover:text-cyan-400 transition-colors"
-                  >
-                    krishi-shah312
-                  </a>
                 </div>
               </div>
-
-              <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700 shadow-xl">
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white text-center mb-2">Send Me a Message</h3>
-                  <p className="text-slate-400 text-center mb-6">
-                    Fill out the form below and I'll get back to you as soon as possible.
-                  </p>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-1">
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Your Name"
-                        required
-                        className="w-full px-4 py-2 bg-slate-900/80 border border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white placeholder:text-slate-500"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-1">
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Your Email"
-                        required
-                        className="w-full px-4 py-2 bg-slate-900/80 border border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white placeholder:text-slate-500"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-1">
-                        Message
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        rows={5}
-                        placeholder="Your Message"
-                        required
-                        className="w-full px-4 py-2 bg-slate-900/80 border border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white placeholder:text-slate-500"
-                      ></textarea>
-                    </div>
-                    <div className="text-center">
-                      <Button
-                        type="submit"
-                        className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0"
-                      >
-                        Send Message
-                      </Button>
-                    </div>
-                  </form>
-                </div>
-              </Card>
             </motion.div>
           </div>
         </section>
