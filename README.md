@@ -3,7 +3,7 @@
 A modern, recruiter-focused portfolio website showcasing expertise in Data Analytics, Software Development, and AI/ML.
 
 ## 🌟 Live Demo
-Visit the live portfolio at: [[https://krishi11.vercel.app](https://krishi-shah-s-portfolio.vercel.app/)]( https://krishi-shah-s-portfolio.vercel.app/)
+Visit the live portfolio at: [(https://krishi-shah-s-portfolio.vercel.app/)]( https://krishi-shah-s-portfolio.vercel.app/)
 
 ## 🎯 Designed for Recruiters
 
