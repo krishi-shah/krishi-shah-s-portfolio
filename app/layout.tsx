@@ -1,36 +1,36 @@
 import type React from "react"
 import type { Metadata } from "next"
+import { ThemeProvider } from "@/components/theme-provider"
 import "../styles/globals.css"
 
 export const metadata: Metadata = {
-  title: "Krishi Shah – Data Analyst & Software Developer Portfolio",
+  title: "Krishi Shah | Data Scientist & ML Engineer",
   description:
-    "Experienced Data Analyst & Software Developer specializing in Python, SQL, Machine Learning, and data visualization. Currently at Government of Ontario with proven track record of improving business operations through data-driven solutions.",
+    "Data Scientist and Machine Learning Engineer specializing in building intelligent systems that drive business impact. Expert in Python, ML/AI, and full-stack development.",
   keywords:
-    "Krishi Shah, Data Analyst, Software Developer, Python, SQL, Machine Learning, Tableau, Power BI, York University, Government of Ontario, Data Science, Business Intelligence, Healthcare Analytics, IoT, Arduino, Predictive Analytics",
+    "Krishi Shah, Data Scientist, Machine Learning Engineer, Full Stack Developer, Python, TensorFlow, PyTorch, React, Next.js, AI, Deep Learning",
   authors: [{ name: "Krishi Shah" }],
   creator: "Krishi Shah",
-  publisher: "Krishi Shah",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://krishi11.vercel.app",
-    title: "Krishi Shah – Data Analyst & Software Developer",
-    description: "Experienced Data Analyst & Software Developer with expertise in Python, SQL, Machine Learning, and data visualization. View my projects and experience.",
+    url: "https://krishi-shah-s-portfolio.vercel.app",
+    title: "Krishi Shah | Data Scientist & ML Engineer",
+    description: "Building intelligent systems that transform data into actionable insights and business impact.",
     siteName: "Krishi Shah Portfolio",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Krishi Shah - Data Analyst & Software Developer Portfolio"
+        alt: "Krishi Shah - Data Scientist & ML Engineer"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Krishi Shah – Data Analyst & Software Developer",
-    description: "Experienced Data Analyst & Software Developer specializing in Python, SQL, and Machine Learning",
+    title: "Krishi Shah | Data Scientist & ML Engineer",
+    description: "Building intelligent systems that transform data into actionable insights.",
     images: ["/og-image.jpg"]
   },
   robots: {
@@ -44,11 +44,8 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
   alternates: {
-    canonical: "https://krishi11.vercel.app",
+    canonical: "https://krishi-shah-s-portfolio.vercel.app",
   },
 }
 
@@ -58,20 +55,29 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="dark">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#84cc16" />
+        <meta name="theme-color" content="#4F46E5" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#1e1b4b" media="(prefers-color-scheme: dark)" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
-      <body className="antialiased bg-black text-white" suppressHydrationWarning>
-        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-lime-500 text-black px-4 py-2 rounded z-50 font-bold">
-          Skip to main content
-        </a>
-        {children}
+      <body className="min-h-screen" suppressHydrationWarning>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange={false}
+        >
+          <a 
+            href="#main-content" 
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg z-[100] font-medium focus-ring"
+          >
+            Skip to main content
+          </a>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
