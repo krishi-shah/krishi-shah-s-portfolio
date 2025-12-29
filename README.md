@@ -1,123 +1,200 @@
-# Krishi Shah - Portfolio Website
+# Krishi Shah - Portfolio
 
-A modern, recruiter-focused portfolio website showcasing expertise in Data Analytics, Software Development, and AI/ML.
+A modern, responsive portfolio website built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion. Inspired by [zalt.me](https://zalt.me/).
 
-## 🌟 Live Demo
-Visit the live portfolio at: [(https://krishi-shah-s-portfolio.vercel.app/)]( https://krishi-shah-s-portfolio.vercel.app/)
+![Portfolio Preview](./public/og-image.png)
 
-## 🎯 Designed for Recruiters
+## ✨ Features
 
-This portfolio is specifically designed to catch the attention of recruiters in:
-- **Data Analytics**
-- **Software Development** 
-- **AI/ML Engineering**
+- **Modern Design**: Clean, minimal aesthetic with smooth animations
+- **Responsive**: Fully responsive across all devices
+- **Dark/Light Theme**: System-aware theme with manual toggle
+- **Animated Hero**: Typewriter effect with animated background
+- **Project Showcase**: Filterable grid with modal details
+- **Blog Section**: Article previews with Medium integration
+- **Contact Form**: Working form with serverless API endpoint
+- **SEO Optimized**: Meta tags, Open Graph, and semantic HTML
+- **Performance**: Optimized images, fonts, and animations
+- **Accessibility**: WCAG AA compliant with keyboard navigation
 
-## ✨ Key Features
+## 🚀 Tech Stack
 
-### 🚀 Strong First Impression
-- Compelling hero section with clear value proposition
-- Professional headshot with floating skill badges
-- Key metrics prominently displayed (5+ ML Projects, 100K+ Data Points Analyzed)
-- Three strategic CTA buttons: View Projects, Download Resume, Contact Me
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Deployment**: Vercel
 
-### 📊 Impact-Focused Projects
-- **Problem/Context** clearly defined for each project
-- **Role & Tools** highlighted with specific technologies
-- **Quantified Outcomes** with business impact metrics
-- Interactive project cards with live demo and GitHub links
-- Filter system by project category
+## 📦 Installation
 
-### 🛠 Comprehensive Skills Showcase
-- Organized by categories: Data Analytics, ML, Web Development, Visualization, Cloud
-- Visual progress indicators with smooth animations
-- Icon-based skill representation
-- Hover effects and micro-interactions
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/krishi-shah/krishi-shah-s-portfolio.git
+   cd krishi-shah-s-portfolio
+   ```
 
-### 🎨 Professional Design System
-- Consistent cyan/blue color palette
-- Modern glassmorphism effects
-- Smooth animations and transitions
-- Dark/light theme toggle
-- Mobile-responsive design
-
-### 📄 Resume Integration
-- One-click PDF download functionality
-- ATS-optimized resume structure
-- Professional credentials display
-- LinkedIn integration
-
-### 📝 Technical Blog Section
-- Showcases technical writing ability
-- Case studies from real projects
-- Categories: IoT & Hardware, Data Engineering, Business Intelligence, Machine Learning
-- Coming soon functionality for future content
-
-### 🔍 SEO & Performance Optimized
-- Comprehensive meta tags and Open Graph
-- JSON-LD structured data
-- Sitemap and robots.txt
-- 90+ Lighthouse performance scores
-- WCAG accessibility compliance
-
-## 🛠 Tech Stack
-
-- **Framework:** Next.js 15
-- **Styling:** Tailwind CSS
-- **UI Components:** Radix UI
-- **Animations:** Framer Motion
-- **Icons:** Lucide React
-- **Deployment:** Vercel
-
-## 🚀 Quick Start
-
-1. **Install dependencies:**
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-2. **Run development server:**
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env.local
+   ```
+   Edit `.env.local` with your configuration.
+
+4. **Run the development server**
    ```bash
    npm run dev
    ```
 
-3. **Build for production:**
-   ```bash
-   npm run build
-   ```
+5. **Open in browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 📋 Deployment Checklist
+## 🏗️ Project Structure
 
-Before deploying, ensure you have:
-- [ ] Resume PDF in `public/resume/`
-- [ ] Favicon and app icons
-- [ ] Social sharing image (`og-image.jpg`)
-- [ ] Environment variables configured
-- [ ] Google Analytics setup (optional)
+```
+├── app/                    # Next.js App Router pages
+│   ├── api/               # API routes
+│   ├── projects/          # Project detail pages
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/            # React components
+│   ├── Header.tsx         # Navigation header
+│   ├── Hero.tsx           # Hero section
+│   ├── AboutSection.tsx   # About & experience
+│   ├── ProjectsSection.tsx # Projects grid
+│   ├── WritingSection.tsx # Blog posts
+│   ├── ContactSection.tsx # Contact form
+│   └── Footer.tsx         # Footer
+├── data/                  # Content data (JSON)
+│   ├── site.json          # Site configuration
+│   ├── projects.json      # Project data
+│   └── posts.json         # Blog posts
+├── lib/                   # Utilities & hooks
+│   ├── content.ts         # Data loaders
+│   ├── utils.ts           # Helper functions
+│   └── hooks/             # Custom React hooks
+├── styles/                # Global styles
+│   └── globals.css        # Tailwind & custom CSS
+└── public/                # Static assets
+```
 
-See `DEPLOYMENT.md` for detailed instructions.
+## ⚙️ Configuration
 
-## 🎯 Recruiter Benefits
+### Content Data
 
-This portfolio demonstrates:
-- **Technical Excellence:** Modern web technologies and best practices
-- **Business Impact:** Quantified results from real projects
-- **Communication Skills:** Clear problem-solving approach
-- **Professional Growth:** Continuous learning and skill development
-- **Industry Knowledge:** Understanding of data analytics and software development workflows
+Edit files in `/data` to update content:
 
-## 📊 Performance Metrics
+- `site.json` - Name, bio, social links, theme
+- `projects.json` - Portfolio projects
+- `posts.json` - Blog articles
 
-- **Lighthouse Performance:** 90+
-- **Accessibility Score:** 95+
-- **SEO Score:** 95+
-- **Best Practices:** 90+
+### Environment Variables
 
-## 🔗 Connect with Krishi
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `SENDGRID_API_KEY` | SendGrid API key for emails | No* |
+| `FORMSPREE_ENDPOINT` | Formspree form endpoint | No* |
+| `CONTACT_EMAIL` | Email for form submissions | No |
+| `NEXT_PUBLIC_SITE_URL` | Production site URL | No |
 
-- **LinkedIn:** [krishi-shah312](https://www.linkedin.com/in/krishi-shah312)
-- **Email:** krishi12@my.yorku.ca
-- **GitHub:** [krishi-shah](https://github.com/krishi-shah)
+*One of `SENDGRID_API_KEY` or `FORMSPREE_ENDPOINT` is required for the contact form to send emails in production.
+
+## 🎨 Customization
+
+### Colors
+
+Edit CSS variables in `styles/globals.css`:
+
+```css
+:root {
+  --primary: 160 84% 39%;  /* Emerald green */
+  --background: 0 0% 100%;
+  /* ... */
+}
+```
+
+### Fonts
+
+Fonts are configured in `app/layout.tsx`:
+
+```typescript
+import { Inter, Space_Grotesk, Fira_Code } from 'next/font/google';
+```
+
+### Animations
+
+Animation durations in `tailwind.config.js`:
+
+```javascript
+transitionDuration: {
+  '240': '240ms',   // Base
+  '420': '420ms',   // Medium
+  '820': '820ms',   // Long
+}
+```
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+1. Push to GitHub
+2. Import project in [Vercel](https://vercel.com)
+3. Add environment variables
+4. Deploy
+
+### Build Commands
+
+```bash
+npm run build      # Build for production
+npm run start      # Start production server
+npm run lint       # Run ESLint
+npm run type-check # TypeScript type checking
+```
+
+## 📧 Contact Form Setup
+
+### Option 1: SendGrid
+
+1. Create account at [sendgrid.com](https://sendgrid.com)
+2. Generate API key
+3. Add `SENDGRID_API_KEY` to environment
+
+### Option 2: Formspree
+
+1. Create form at [formspree.io](https://formspree.io)
+2. Copy form endpoint
+3. Add `FORMSPREE_ENDPOINT` to environment
+
+## 🔗 CMS Integration (Optional)
+
+The portfolio supports headless CMS integration:
+
+### Sanity
+
+1. Create project at [sanity.io](https://sanity.io)
+2. Define schemas matching data structure
+3. Replace data loaders in `lib/content.ts`
+
+### Contentful
+
+1. Create space at [contentful.com](https://contentful.com)
+2. Define content models
+3. Update data fetching logic
+
+## 📝 License
+
+MIT License - feel free to use for your own portfolio!
+
+## 🤝 Credits
+
+- Design inspired by [zalt.me](https://zalt.me/)
+- Built with [Next.js](https://nextjs.org)
+- Styled with [Tailwind CSS](https://tailwindcss.com)
+- Animated with [Framer Motion](https://framer.com/motion)
 
 ---
 
-**Built with ❤️ in Toronto** | Next.js & Tailwind CSS | Hosted on Vercel
+Made with ❤️ by Krishi Shah

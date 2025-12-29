@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "5-steps-data-scientist",
+    "title": "5 Steps to Become a Data Scientist",
+    "excerpt": "A comprehensive guide outlining the essential steps and skills needed to transition into a data science career.",
+    "content": "",
+    "coverImage": "/images/posts/data-scientist.jpg",
+    "date": "2024-05-21",
+    "readTime": "6 min",
+    "tags": ["Career", "Data Science", "Learning"],
+    "featured": true
+  },
+  {
+    "slug": "building-ml-pipelines",
+    "title": "Building Production ML Pipelines",
+    "excerpt": "Best practices for deploying machine learning models at scale with robust monitoring and maintenance.",
+    "content": "",
+    "coverImage": "/images/posts/ml-pipelines.jpg",
+    "date": "2024-04-15",
+    "readTime": "8 min",
+    "tags": ["Machine Learning", "MLOps", "Engineering"],
+    "featured": true
+  },
+  {
+    "slug": "future-ai-healthcare",
+    "title": "The Future of AI in Healthcare",
+    "excerpt": "Exploring how machine learning is transforming patient care, diagnostics, and medical research.",
+    "content": "",
+    "coverImage": "/images/posts/ai-healthcare.jpg",
+    "date": "2024-03-10",
+    "readTime": "5 min",
+    "tags": ["AI", "Healthcare", "Innovation"],
+    "featured": false
+  },
+  {
+    "slug": "power-bi-best-practices",
+    "title": "Power BI Dashboard Best Practices",
+    "excerpt": "Design principles and optimization techniques for building high-performance Power BI dashboards.",
+    "content": "",
+    "coverImage": "/images/posts/power-bi.jpg",
+    "date": "2024-02-20",
+    "readTime": "7 min",
+    "tags": ["Power BI", "Data Visualization", "Analytics"],
+    "featured": false
+  }
+]
+

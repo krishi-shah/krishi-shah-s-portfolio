@@ -1,0 +1,38 @@
+{
+  "name": "Krishi Shah",
+  "title": "Data Scientist & ML Engineer",
+  "shortBio": "I build intelligent systems that transform raw data into actionable insights and measurable business impact.",
+  "longBio": "Computer Science student at York University with a passion for machine learning, data analytics, and full-stack development. Currently working as a Software Developer Co-op at the Government of Ontario, where I build data-driven solutions that improve government operations.",
+  "location": "Toronto, Canada",
+  "email": "krishi12@my.yorku.ca",
+  "timezone": "America/Toronto",
+  "heroTaglines": [
+    "Building intelligent systems",
+    "Transforming data into impact",
+    "Creating ML solutions",
+    "Driving business decisions"
+  ],
+  "badges": [
+    "Data Scientist",
+    "ML Engineer",
+    "Full-Stack Developer",
+    "Analytics Expert"
+  ],
+  "social": {
+    "github": "https://github.com/krishi-shah",
+    "linkedin": "https://linkedin.com/in/krishi-shah312",
+    "twitter": "",
+    "medium": "https://medium.com/@krishishah2021"
+  },
+  "theme": {
+    "primaryColor": "#10b981",
+    "accentColor": "#6366f1"
+  },
+  "stats": [
+    { "value": "3+", "label": "Years Experience" },
+    { "value": "5+", "label": "ML Projects" },
+    { "value": "100K+", "label": "Data Points" },
+    { "value": "35%", "label": "Efficiency Boost" }
+  ]
+}
+

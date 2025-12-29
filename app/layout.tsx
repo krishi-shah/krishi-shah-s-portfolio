@@ -1,37 +1,78 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { ThemeProvider } from "@/components/theme-provider"
-import "../styles/globals.css"
+import type { Metadata, Viewport } from 'next';
+import { Inter, Space_Grotesk, Fira_Code } from 'next/font/google';
+import '@/styles/globals.css';
+import { getSiteConfig } from '@/lib/content';
+
+const siteConfig = getSiteConfig();
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+  display: 'swap',
+});
+
+const firaCode = Fira_Code({
+  subsets: ['latin'],
+  variable: '--font-fira-code',
+  display: 'swap',
+});
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0f' },
+  ],
+  width: 'device-width',
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
-  title: "Krishi Shah | Data Scientist & ML Engineer",
-  description:
-    "Data Scientist and Machine Learning Engineer specializing in building intelligent systems that drive business impact. Expert in Python, ML/AI, and full-stack development.",
-  keywords:
-    "Krishi Shah, Data Scientist, Machine Learning Engineer, Full Stack Developer, Python, TensorFlow, PyTorch, React, Next.js, AI, Deep Learning",
-  authors: [{ name: "Krishi Shah" }],
-  creator: "Krishi Shah",
+  title: {
+    default: `${siteConfig.name} | ${siteConfig.title}`,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.shortBio,
+  keywords: [
+    'Data Scientist',
+    'Machine Learning Engineer',
+    'Full Stack Developer',
+    'Portfolio',
+    'Python',
+    'React',
+    'Next.js',
+    'AI',
+    'Analytics',
+  ],
+  authors: [{ name: siteConfig.name }],
+  creator: siteConfig.name,
+  metadataBase: new URL('https://krishi-shah.vercel.app'),
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://krishi-shah-s-portfolio.vercel.app",
-    title: "Krishi Shah | Data Scientist & ML Engineer",
-    description: "Building intelligent systems that transform data into actionable insights and business impact.",
-    siteName: "Krishi Shah Portfolio",
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://krishi-shah.vercel.app',
+    title: `${siteConfig.name} | ${siteConfig.title}`,
+    description: siteConfig.shortBio,
+    siteName: siteConfig.name,
     images: [
       {
-        url: "/og-image.jpg",
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: "Krishi Shah - Data Scientist & ML Engineer"
-      }
-    ]
+        alt: siteConfig.name,
+      },
+    ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Krishi Shah | Data Scientist & ML Engineer",
-    description: "Building intelligent systems that transform data into actionable insights.",
-    images: ["/og-image.jpg"]
+    card: 'summary_large_image',
+    title: `${siteConfig.name} | ${siteConfig.title}`,
+    description: siteConfig.shortBio,
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -39,46 +80,53 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
-  alternates: {
-    canonical: "https://krishi-shah-s-portfolio.vercel.app",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
   },
-}
+  manifest: '/site.webmanifest',
+};
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${inter.variable} ${spaceGrotesk.variable} ${firaCode.variable}`}
+      suppressHydrationWarning
+    >
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#4F46E5" media="(prefers-color-scheme: light)" />
-        <meta name="theme-color" content="#1e1b4b" media="(prefers-color-scheme: dark)" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = localStorage.getItem('theme');
+                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
       </head>
-      <body className="min-h-screen" suppressHydrationWarning>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange={false}
-        >
-          <a 
-            href="#main-content" 
-            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg z-[100] font-medium focus-ring"
-          >
-            Skip to main content
-          </a>
-          {children}
-        </ThemeProvider>
+      <body className="font-sans antialiased bg-background text-foreground">
+        {children}
+        {/* Noise overlay for texture */}
+        <div className="noise-overlay" aria-hidden="true" />
       </body>
     </html>
-  )
+  );
 }
