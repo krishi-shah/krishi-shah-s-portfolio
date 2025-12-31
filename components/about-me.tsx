@@ -219,7 +219,7 @@ export default function AboutMe() {
   )
 }
 
-function SkillBar({ name, proficiency }) {
+function SkillBar({ name, proficiency }: { name: string; proficiency: number }) {
   return (
     <div className="mb-4">
       <div className="flex justify-between mb-1">
