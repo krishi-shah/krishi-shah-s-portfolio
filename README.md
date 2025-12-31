@@ -1,8 +1,5 @@
 # Krishi Shah - Portfolio
 
-A modern, responsive portfolio website built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion. Inspired by [zalt.me](https://zalt.me/).
-
-![Portfolio Preview](./public/og-image.png)
 
 ## ✨ Features
 
