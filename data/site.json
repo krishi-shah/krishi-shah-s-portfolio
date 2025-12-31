@@ -1,22 +1,23 @@
 {
   "name": "Krishi Shah",
-  "title": "Data Scientist & ML Engineer",
-  "shortBio": "I build intelligent systems that transform raw data into actionable insights and measurable business impact.",
-  "longBio": "Computer Science student at York University with a passion for machine learning, data analytics, and full-stack development. Currently working as a Software Developer Co-op at the Government of Ontario, where I build data-driven solutions that improve government operations.",
-  "location": "Toronto, Canada",
+  "title": "Data Analyst & Software Developer",
+  "shortBio": "Turning data into decisions with dashboards, ML models, and scalable code. Software Developer Co-op at Government of Ontario with a passion for building data-driven solutions.",
+  "longBio": "As a Computer Science student at York University and Software Developer Co-op at Government of Ontario, I transform complex datasets into actionable insights and build scalable applications that solve real-world problems. I specialize in the intersection of data science, machine learning, and software engineering.",
+  "location": "Toronto, ON",
   "email": "krishi12@my.yorku.ca",
+  "phone": "825-777-0303",
   "timezone": "America/Toronto",
   "heroTaglines": [
-    "Building intelligent systems",
-    "Transforming data into impact",
-    "Creating ML solutions",
-    "Driving business decisions"
+    "Data Analyst",
+    "Software Developer",
+    "ML Engineer",
+    "Problem Solver"
   ],
   "badges": [
-    "Data Scientist",
-    "ML Engineer",
-    "Full-Stack Developer",
-    "Analytics Expert"
+    "Python",
+    "SQL",
+    "ML",
+    "Tableau"
   ],
   "social": {
     "github": "https://github.com/krishi-shah",
@@ -26,13 +27,12 @@
   },
   "theme": {
     "primaryColor": "#10b981",
-    "accentColor": "#6366f1"
+    "accentColor": "#06b6d4"
   },
   "stats": [
-    { "value": "3+", "label": "Years Experience" },
     { "value": "5+", "label": "ML Projects" },
-    { "value": "100K+", "label": "Data Points" },
-    { "value": "35%", "label": "Efficiency Boost" }
+    { "value": "100K+", "label": "Data Points Analyzed" },
+    { "value": "4+", "label": "Years Coding" },
+    { "value": "3", "label": "Internships" }
   ]
 }
-

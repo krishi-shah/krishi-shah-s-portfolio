@@ -10,6 +10,7 @@ export interface SiteConfig {
   longBio: string;
   location: string;
   email: string;
+  phone?: string;
   timezone: string;
   heroTaglines: string[];
   badges: string[];
@@ -62,6 +63,7 @@ export interface Post {
   readTime: string;
   tags: string[];
   featured: boolean;
+  link?: string;
 }
 
 // Content getters

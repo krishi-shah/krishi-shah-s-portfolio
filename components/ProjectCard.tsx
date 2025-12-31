@@ -30,10 +30,19 @@ export default function ProjectCard({ project, index, onOpen }: ProjectCardProps
     >
       <div
         className={cn(
-          'relative overflow-hidden rounded-2xl bg-card border border-border',
+          'relative overflow-hidden rounded-2xl',
           'transition-all duration-500',
-          'hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20'
+          'hover:border-emerald-500/30'
         )}
+        style={{
+          background: 'linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%)',
+          backdropFilter: 'blur(16px)',
+          WebkitBackdropFilter: 'blur(16px)',
+          border: '1px solid rgba(255,255,255,0.1)',
+          boxShadow: isHovered 
+            ? '0 8px 40px rgba(16, 185, 129, 0.15), 0 2px 8px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1)'
+            : '0 4px 24px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.08)',
+        }}
       >
         {/* Image Container */}
         <div className="relative aspect-[16/10] overflow-hidden bg-muted">

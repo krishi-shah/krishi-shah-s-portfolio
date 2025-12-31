@@ -122,7 +122,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans antialiased bg-background text-foreground">
+      <body className="font-sans antialiased bg-[#0a0a0f] text-white overflow-x-hidden">
         {children}
         {/* Noise overlay for texture */}
         <div className="noise-overlay" aria-hidden="true" />

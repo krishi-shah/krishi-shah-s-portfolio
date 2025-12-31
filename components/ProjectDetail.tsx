@@ -60,11 +60,17 @@ export default function ProjectDetail({ project, isOpen, onClose }: ProjectDetai
             exit={{ opacity: 0, y: 50, scale: 0.95 }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
           >
-            <div className="bg-card rounded-2xl border border-border shadow-2xl overflow-hidden">
+            <div className="rounded-2xl overflow-hidden" style={{
+              background: 'linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 100%)',
+              backdropFilter: 'blur(20px)',
+              WebkitBackdropFilter: 'blur(20px)',
+              border: '1px solid rgba(255,255,255,0.1)',
+              boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1)',
+            }}>
               {/* Close Button */}
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 z-20 p-2 rounded-full bg-background/80 backdrop-blur-sm border border-border hover:bg-muted transition-colors"
+                className="absolute top-4 right-4 z-20 p-2 rounded-full bg-black/50 backdrop-blur-xl border border-white/20 hover:bg-white/10 transition-all duration-300"
                 aria-label="Close modal"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
