@@ -186,8 +186,6 @@ The portfolio supports headless CMS integration:
 MIT License - feel free to use for your own portfolio!
 
 ## 🤝 Credits
-
-- Design inspired by [zalt.me](https://zalt.me/)
 - Built with [Next.js](https://nextjs.org)
 - Styled with [Tailwind CSS](https://tailwindcss.com)
 - Animated with [Framer Motion](https://framer.com/motion)
