@@ -67,10 +67,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           fill
           className="object-cover"
           priority
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.style.display = 'none';
-          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
         
